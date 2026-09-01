@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      - POSTGRES_USER=saulo
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_DB=animaldb
+    ports:
+      - "5433:5432"
+    volumes:
+      - persistente:/var/lib/postgresql/data
+
+volumes:
+  persistente:
